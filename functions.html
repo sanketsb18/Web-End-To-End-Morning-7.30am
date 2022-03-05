@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+               function add(num1, num2) {
+                 console.log("addition", num1 + num2);
+               }
+
+
+               // function add2() {
+               //   let num1 = 60;
+               //   let num2 = 20;
+
+               //   console.log("addition", num1 + num2);
+               // }
+               // add2()
+
+
+
+           //   add = () => {
+           //     let num1 = 10;
+           //     let num2 = 50;
+
+           //     console.log("addition", num1 + num2);
+           //   };
+
+
+             add(50,80);
+
+             //   let multiply = function () {
+             //     let num1 = 10;
+             //     let num2 = 50;
+
+             //     console.log("multiplication", num1 * num2);
+             //   };
+
+            //  (function magic(){
+            //    console.log('Magic is about to happen...')
+            //  })()
+   
+   
+             (() => {
+               console.log('Magic is about to happen...')
+             })()
+
+             //magic();
+
+
+             // function expression/ variable function/ function variable
+
+             // var sendMessage = function (){
+             //   console.log('message send')
+             // }
+
+             const sendMessage = () => {
+               console.log('message send')
+             }
+
+             sendMessage();
+
+
+
+             if (true) {
+               let multiply = () => {
+                 let num1 = 10;
+                 let num2 = 50;
+                 console.log("multiplication", num1 * num2);
+                 return true;
+                 console.log("Hiii");
+               };
+
+               console.log(multiply());
+
+               if (multiply()){
+                   console.log("Welcome to Js");
+               } else {
+                   console.log("No Magic");
+               }
+
+               multiply();
+               multiply();
+             }
+
+             setTimeout(()=>{
+               add(10,30)
+             }, 5000)
+
+             function displayMessage(x){
+                 x();
+                 console.log(x()+50);
+                 console.log("Hello, Good Morning");
+             }
+
+             function cb(){
+                 console.log("JS Magic");
+                 return 100;
+             }
+
+             setTimeout(()=>{
+               add(50,70)
+             }, 4000)
+
+             displayMessage(cb)
+    </script>
+  </body>
+</html>
