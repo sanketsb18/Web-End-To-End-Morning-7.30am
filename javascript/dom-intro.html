@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input onfocus="changeStyles()" id="fname" type="radio" />
+
+    <button onclick="displayData()">Display FullName</button>
+
+    <button onclick="createPara()">Create Paragrapgh</button>
+
+    <button>create hyperlink</button>
+
+    <a href=""></a>
+    <span id="content"></span>
+
+    <script>
+      function displayData() {
+        let data = document.getElementById("fname").value;
+        console.log(data);
+      }
+
+      function changeStyles() {
+        let data = document.getElementById("fname");
+        data.style.accentColor = "yellow";
+      }
+
+      function createPara() {
+        let paragrapgh = document.createElement("p");
+        let body = document.body;
+        body.appendChild(paragrapgh);
+        paragrapgh.append("Welcome");
+
+        document.getElementById("content").innerHTML = "Good Morning";
+
+        let natureImage = document.createElement("img");
+        body.append(natureImage);
+
+        natureImage.setAttribute(
+          "src",
+          "https://images.unsplash.com/photo-1546587348-d12660c30c50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJhbHxlbnwwfHwwfHw%3D&w=1000&q=80"
+        );
+        paragrapgh.setAttribute("class", "news");
+        //  parentElement.appendChild(childElement)
+
+        // how you can add multiple class names using dom ?
+      }
+    </script>
+  </body>
+</html>
