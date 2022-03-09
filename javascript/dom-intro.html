@@ -15,10 +15,32 @@
 
     <button>create hyperlink</button>
 
+    <p id="paragrapgh" class="news">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi quo
+      reiciendis pariatur? Praesentium, quibusdam consequatur. Alias quae magni,
+      distinctio, odit temporibus maiores, nesciunt molestias placeat velit et
+      inventore nihil beatae!
+    </p>
+
+    <button onclick="addClass()">Add class name</button>
+
     <a href=""></a>
     <span id="content"></span>
 
     <script>
+      function addClass() {
+        let para = document.getElementById("paragrapgh");
+
+       // para.className += " sports entertainment";
+
+       //para.classList += ' sports'
+
+       // para.setAttribute('class', para.getAttribute('class') + ' sports')
+      
+        para.classList.add('sports')
+      
+      }
+
       function displayData() {
         let data = document.getElementById("fname").value;
         console.log(data);
