@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Add Link</button>
+    <script>
+      // write an article on how to create a dynamic input field on click 3 ways
+
+      // read about oops conceppts
+      // read about class 
+      // read about constructor, methods and properties 
+      // read about object 
+      // read about this keyword
+
+      let btn = document.getElementById("btn");
+
+      btn.addEventListener(
+        "click",
+        () => {
+          addInput();
+        },
+        { once: true }
+      );
+
+      function addInput() {
+        let body = document.body;
+        let input = document.createElement("input");
+        body.append(input);
+      }
+
+      let x = {
+        fname: "Sanket",
+        city: "Pune",
+        designation: "SWE",
+      };
+
+      class Info {
+        constructor() {
+          this.fname = "Javascript Magic";
+
+        }
+      }
+
+
+      let z = new Info();
+     console.log(z.fname);
+    </script>
+  </body>
+</html>
